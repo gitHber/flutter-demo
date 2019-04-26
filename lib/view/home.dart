@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
+// import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key key, this.title}) : super(key: key);
@@ -32,6 +32,9 @@ class _Counter extends State<HomePage> {
     // 提前注册路由
     Navigator.pushNamed(context, 'web_blog');
   }
+  void navigateToRandom() {
+    Navigator.pushNamed(context, 'random_string');
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -48,6 +51,15 @@ class _Counter extends State<HomePage> {
               highlightColor: Colors.blue[700],
               shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
               onPressed: increment,
+            ),
+            RaisedButton(
+              child: Icon(Icons.create),
+              color: Colors.green,
+              textColor: Colors.white,
+              highlightColor: Colors.blue[700],
+              colorBrightness: Brightness.dark,
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.0)),
+              onPressed: navigateToRandom,
             )
           ],
         ),
