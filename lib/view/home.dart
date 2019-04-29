@@ -2,9 +2,10 @@ import 'package:flutter/material.dart';
 // import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
 
 class HomePage extends StatefulWidget {
-  HomePage({Key key, this.title}) : super(key: key);
+  HomePage({Key key, this.title, this.initValue}) : super(key: key);
 
   final String title;
+  final int initValue;
 
   @override
   _Counter createState() => _Counter();
@@ -12,6 +13,13 @@ class HomePage extends StatefulWidget {
 
 class _Counter extends State<HomePage> {
   int counter = 0;
+  bool active = false;
+
+  void handleTapboxChanged(bool newValue) {
+    setState(() {
+      active = newValue;
+    });
+  }
 
   void increment() {
     setState(() {
@@ -32,8 +40,9 @@ class _Counter extends State<HomePage> {
     // 提前注册路由
     Navigator.pushNamed(context, 'web_blog');
   }
-  void navigateToRandom() {
-    Navigator.pushNamed(context, 'random_string');
+
+  void navigateTo(url) {
+    Navigator.pushNamed(context, url);
   }
 
   @override
@@ -41,26 +50,39 @@ class _Counter extends State<HomePage> {
     print(widget);
     return Scaffold(
       appBar: AppBar(title: Text(widget.title)),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+      body: Padding(
+        padding: const EdgeInsets.all(10),
+        child: Wrap(
+          spacing: 8.0,
           children: <Widget>[
-            Text('$counter', style: Theme.of(context).textTheme.display1),
             RaisedButton(
-              child: Icon(Icons.add),
-              highlightColor: Colors.blue[700],
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
-              onPressed: increment,
+              child: Text("Text"),
+              onPressed: () => {navigateTo('Text')},
             ),
             RaisedButton(
-              child: Icon(Icons.create),
-              color: Colors.green,
-              textColor: Colors.white,
-              highlightColor: Colors.blue[700],
-              colorBrightness: Brightness.dark,
-              shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5.0)),
-              onPressed: navigateToRandom,
-            )
+              child: Text("Button"),
+              onPressed: () => {navigateTo('Button')},
+            ),
+            RaisedButton(
+              child: Text("图片和Icon"),
+              onPressed: () => {navigateTo('Image')},
+            ),
+            RaisedButton(
+              child: Text("Checkbox和Switch"),
+              onPressed: () => {navigateTo('Checkbox')},
+            ),
+            RaisedButton(
+              child: Text("输入框和表单"),
+              onPressed: () => {navigateTo('TextField')},
+            ),
+            RaisedButton(
+              child: Text("布局"),
+              onPressed: () => {navigateTo('Layout')},
+            ),
+            RaisedButton(
+              child: Text("Scaffold、TabBar、底部导航"),
+              onPressed: () => {navigateTo('menu')},
+            ),
           ],
         ),
       ),

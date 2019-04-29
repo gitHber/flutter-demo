@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue
       ),
       routes: routes,
-      home: HomePage(title: '计数器',)
+      home: HomePage(title: '计数器',initValue: 10,)
     );
   }
 }
