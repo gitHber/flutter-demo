@@ -31,7 +31,7 @@ class _MenuState extends State<MenuPage> with SingleTickerProviderStateMixin {
     return Scaffold(
       key: MenuPage.globalKey,
       appBar: AppBar(
-        title: Text('Schedule'),
+        title: Text('昨日头条'),
         leading: Builder(
           builder: (context) {
             return IconButton(

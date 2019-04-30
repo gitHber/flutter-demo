@@ -83,6 +83,26 @@ class _Counter extends State<HomePage> {
               child: Text("Scaffold、TabBar、底部导航"),
               onPressed: () => {navigateTo('menu')},
             ),
+            RaisedButton(
+              child: Text("滚动Widget"),
+              onPressed: () => {navigateTo('scroll')},
+            ),
+            RaisedButton(
+              child: Text("滚动监听及控制ScrollController"),
+              onPressed: () => {navigateTo('scrollListener')},
+            ),
+            RaisedButton(
+              child: Text("导航返回拦截"),
+              onPressed: () => {navigateTo('willPopScope')},
+            ),
+            RaisedButton(
+              child: Text("数据共享"),
+              onPressed: () => {navigateTo('shareData')},
+            ),
+            RaisedButton(
+              child: Text("主题"),
+              onPressed: () => {navigateTo('theme')},
+            ),
           ],
         ),
       ),

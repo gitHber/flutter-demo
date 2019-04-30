@@ -7,6 +7,11 @@ import '../view/checkbox.dart';
 import '../view/textfield.dart';
 import '../view/layout.dart';
 import '../view/Menu.dart';
+import '../view/Scroll.dart';
+import '../view/ScrollListener.dart';
+import '../view/WillPopScopePage.dart';
+import '../view/ShareDataPage.dart';
+import '../view/Theme.dart';
 
 Object routes = {
   'web_blog': (_) => new WebviewScaffold(
@@ -21,4 +26,10 @@ Object routes = {
   'TextField': (context) => TextFieldPage(),
   'Layout': (context) => LayoutPage(),
   'menu': (context) => MenuPage(),
+  'scroll': (context) => ScrollPage(),
+  'scrollListener': (context) => ScrollListenerPage(),
+  'willPopScope': (context) => WillPopScopePage(),
+  'shareData': (context) => ShareDataPage(),
+  'theme': (context) => ThemePage(),
+  
 };
