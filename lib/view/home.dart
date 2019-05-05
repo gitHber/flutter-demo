@@ -103,6 +103,26 @@ class _Counter extends State<HomePage> {
               child: Text("主题"),
               onPressed: () => {navigateTo('theme')},
             ),
+            RaisedButton(
+              child: Text("原始指针事件"),
+              onPressed: () => {navigateTo('event')},
+            ),
+            RaisedButton(
+              child: Text("手势识别"),
+              onPressed: () => {navigateTo('gesture')},
+            ),
+            RaisedButton(
+              child: Text("注册事件"),
+              onPressed: () => {navigateTo('onEvent')},
+            ),
+            RaisedButton(
+              child: Text("触发事件"),
+              onPressed: () => {navigateTo('emitEvent')},
+            ),
+            RaisedButton(
+              child: Text("通知Notification"),
+              onPressed: () => {navigateTo('notification')},
+            ),
           ],
         ),
       ),

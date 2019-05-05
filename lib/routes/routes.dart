@@ -12,6 +12,11 @@ import '../view/ScrollListener.dart';
 import '../view/WillPopScopePage.dart';
 import '../view/ShareDataPage.dart';
 import '../view/Theme.dart';
+import '../view/EventPage.dart';
+import '../view/GesturePage.dart';
+import '../view/OnEventPage.dart';
+import '../view/EmitEventPage.dart';
+import '../view/NotificationPage.dart';
 
 Object routes = {
   'web_blog': (_) => new WebviewScaffold(
@@ -31,5 +36,9 @@ Object routes = {
   'willPopScope': (context) => WillPopScopePage(),
   'shareData': (context) => ShareDataPage(),
   'theme': (context) => ThemePage(),
-  
+  'event': (context) => EventPage(),
+  'gesture': (context) => GesturePage(),
+  'onEvent': (context) => OnEventPage(),
+  'emitEvent': (context) => EmitEventPage(),
+  'notification': (context) => NotificationPage(),
 };
