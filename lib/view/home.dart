@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 // import 'package:flutter_webview_plugin/flutter_webview_plugin.dart';
+import '../route-animation/FadeRoute.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key key, this.title, this.initValue}) : super(key: key);
@@ -122,6 +123,57 @@ class _Counter extends State<HomePage> {
             RaisedButton(
               child: Text("通知Notification"),
               onPressed: () => {navigateTo('notification')},
+            ),
+            RaisedButton(
+              child: Text("Scale动画"),
+              onPressed: () => {navigateTo('scaleAnimation')},
+            ),
+            RaisedButton(
+              child: Text("Hero动画"),
+              onPressed: () => {navigateTo('heroAnimation')},
+            ),
+            RaisedButton(
+              child: Text("交错动画"),
+              onPressed: () => {navigateTo('staggerAnimation')},
+            ),
+            RaisedButton(
+              child: Text("自定义路由过渡动画"),
+              onPressed: () {
+                // Navigator.push(
+                //     context,
+                //     PageRouteBuilder(
+                //         transitionDuration: Duration(microseconds: 500),
+                //         pageBuilder: (BuildContext context, Animation animation,
+                //             Animation secondaryAnimation) {
+                //           return FadeTransition(
+                //             opacity: animation,
+                //             child: Center(
+                //               child: Container(
+                //                 height: 200,
+                //                 width: 200,
+                //                 color: Colors.red,
+                //               ),
+                //             ),
+                //           );
+                //         }));
+                Navigator.push(context, FadeRoute(builder: (context) {
+                  return Center(
+                    child: Container(
+                      height: 200,
+                      width: 200,
+                      color: Colors.red,
+                    ),
+                  );
+                }));
+              },
+            ),
+            RaisedButton(
+              child: Text("自定义Widget"),
+              onPressed: () => {navigateTo('page')},
+            ),
+            RaisedButton(
+              child: Text("CustomPaint和canvas"),
+              onPressed: () => {navigateTo('chess')},
             ),
           ],
         ),

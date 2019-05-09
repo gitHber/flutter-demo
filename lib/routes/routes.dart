@@ -17,6 +17,11 @@ import '../view/GesturePage.dart';
 import '../view/OnEventPage.dart';
 import '../view/EmitEventPage.dart';
 import '../view/NotificationPage.dart';
+import '../view/ScaleAnimationPage.dart';
+import '../view/HeroAnimationPage.dart';
+import '../view/StaggerAnimationPage.dart';
+import '../view/NormalPage.dart';
+import '../view/CustomPaintPage.dart';
 
 Object routes = {
   'web_blog': (_) => new WebviewScaffold(
@@ -41,4 +46,10 @@ Object routes = {
   'onEvent': (context) => OnEventPage(),
   'emitEvent': (context) => EmitEventPage(),
   'notification': (context) => NotificationPage(),
+  'scaleAnimation': (context) => ScaleAnimationPage(),
+  'heroAnimation': (context) => HeroAnimationPage(),
+  'heroB': (context) => HeroAnimationB(),
+  'staggerAnimation': (context) => StaggerDemo(),
+  'page': (context) => NormalPage(),
+  'chess': (context) => CustomPaintPage(),
 };

@@ -65,12 +65,16 @@ class _MenuState extends State<MenuPage> with SingleTickerProviderStateMixin {
           children: <Widget>[
             IconButton(
               icon: Icon(Icons.home),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, 'theme');
+              },
             ),
             SizedBox(),
             IconButton(
               icon: Icon(Icons.business),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, 'theme');
+              },
             )
           ],
           mainAxisAlignment: MainAxisAlignment.spaceAround
