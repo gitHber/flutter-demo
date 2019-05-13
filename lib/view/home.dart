@@ -175,6 +175,14 @@ class _Counter extends State<HomePage> {
               child: Text("CustomPaint和canvas"),
               onPressed: () => {navigateTo('chess')},
             ),
+            RaisedButton(
+              child: Text("文件操作"),
+              onPressed: () => {navigateTo('io')},
+            ),
+            RaisedButton(
+              child: Text("Http请求"),
+              onPressed: () => {navigateTo('httpClient')},
+            ),
           ],
         ),
       ),

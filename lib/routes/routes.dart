@@ -22,6 +22,8 @@ import '../view/HeroAnimationPage.dart';
 import '../view/StaggerAnimationPage.dart';
 import '../view/NormalPage.dart';
 import '../view/CustomPaintPage.dart';
+import '../view/IOPage.dart';
+import '../view/HttpClientPage.dart';
 
 Object routes = {
   'web_blog': (_) => new WebviewScaffold(
@@ -52,4 +54,6 @@ Object routes = {
   'staggerAnimation': (context) => StaggerDemo(),
   'page': (context) => NormalPage(),
   'chess': (context) => CustomPaintPage(),
+  'io': (context) => FileOperationPage(),
+  'httpClient': (context) => HttpClientPage(),
 };
