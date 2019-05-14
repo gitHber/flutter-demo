@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue
       ),
       routes: routes,
-      home: HomePage(title: 'Flutter介绍',initValue: 10,)
+      home: HomePage()
     );
   }
 }
